@@ -5,7 +5,7 @@ import numpy as np
 
 @st.cache_resource
 def load_model():
-    with open("fraud_dection_system.pkl", "rb") as f:
+    with open("fraud_detection_system.pkl", "rb") as f:
         return pickle.load(f)
 
 model = load_model()
@@ -40,3 +40,4 @@ if st.button("🔍 Predict"):
         st.error("🚨 Fraudulent Transaction")
     else:
         st.success("✅ Legitimate Transaction")
+
